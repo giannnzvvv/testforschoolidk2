@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jingle</title>
+    <style>
+        body {
+            background-color: black;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            overflow: hidden;
+            color: white;
+        }
+
+        .content {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: none;
+        }
+
+        audio {
+            display: none;
+        }
+
+        button {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            font-size: 18px;
+            cursor: pointer;
+            margin-top: 20px;
+            border-radius: 15px;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+
+        audio.controls {
+            display: block;
+            margin-top: 20px;
+            background-color: #333;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="content">
+        <img id="image" src="https://raw.githubusercontent.com/giannnzvvv/testforschoolidk/main/4507bbb0616b7712f765a3a0053d1cab.gif" alt="Imagem após o clique.">
+
+        <audio id="audio" loop controls>
+            <source src="https://raw.githubusercontent.com/giannnzvvv/testforschoolidk/main/bullying.mp3" type="audio/mpeg">
+            Seu navegador não suporta o formato de áudio.
+        </audio>
+
+        <button onclick="startAudio()">Ouvir!</button>
+    </div>
+
+    <script>
+        function startAudio() {
+            document.getElementById('audio').play();
+            document.getElementById('image').style.display = 'block';
+            document.querySelector('button').style.display = 'none';
+        }
+    </script>
+
+</body>
+</html>
